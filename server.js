@@ -52,6 +52,10 @@ app.use("/v1/api/statistics/", statisticsRouter);
 // ✅ database connection
 dbConnect();
 
+app.get("/", (req, res) => {
+  res.send("EUSF API is running...");
+});
+
 console.log("🌐 Environment:", process.env.NODE_ENV);
 
 // ✅ start server
